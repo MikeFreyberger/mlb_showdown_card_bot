@@ -1,0 +1,22 @@
+{
+  "base_name": "Ken Griffey Jr.",
+  "base_year": "1997",
+  "character_name": "Captain America",
+  "command": null,
+  "dark_mode": false,
+  "defense": {},
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "photos/captain_america.png",
+  "ip": null,
+  "output_filename": null,
+  "outs": null,
+  "parallel": null,
+  "set": "2002",
+  "set_number": "12/98",
+  "speed": null,
+  "speed_letter": null,
+  "stats": {},
+  "team_override": null
+}
