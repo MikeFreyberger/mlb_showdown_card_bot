@@ -211,6 +211,7 @@ def merge_args_into_state(args: argparse.Namespace, prev: dict | None) -> dict:
         "hide_team_logo": args.hide_team_logo if args.hide_team_logo is not None else prev.get("hide_team_logo", True),
         "hide_bot_logo": args.hide_bot_logo if args.hide_bot_logo is not None else prev.get("hide_bot_logo", True),
         "hide_set_year_text": args.hide_set_year_text if args.hide_set_year_text is not None else prev.get("hide_set_year_text", True),
+        "set_number": args.set_number or prev.get("set_number"),
         "output_filename": args.output_filename or prev.get("output_filename"),
     }
 
@@ -260,6 +261,8 @@ def construct_card(card_data: dict, state: dict) -> ShowdownPlayerCard:
     image["hide_team_logo"] = state["hide_team_logo"]
     image["hide_bot_logo"] = state["hide_bot_logo"]
     image["hide_set_year_text"] = state["hide_set_year_text"]
+    if state.get("set_number"):
+        image["set_number"] = state["set_number"]
     if state.get("parallel"):
         image["parallel"] = state["parallel"]
     image["is_dark_mode"] = state.get("dark_mode", False)
@@ -378,6 +381,7 @@ def main():
     parser.add_argument("--hide-team-logo", action=argparse.BooleanOptionalAction, default=None, help="Hide the real team's logo/branding (default: hidden, on first creation)")
     parser.add_argument("--hide-bot-logo", action=argparse.BooleanOptionalAction, default=None, help="Hide the Showdown Bot logo badge (default: hidden, on first creation)")
     parser.add_argument("--hide-set-year-text", action=argparse.BooleanOptionalAction, default=None, help="Hide the real player's year badge (default: hidden, on first creation)")
+    parser.add_argument("--set-number", default=None, help="Card number to print in place of the real year badge (ex: '1/98' for checklist #1 of a themed 98-card set). Leaving this unset renders the badge empty.")
     parser.add_argument("--output-folder", default=None, help=f"Where to save the image + edit state (default: {DEFAULT_OUTPUT_FOLDER})")
     parser.add_argument("--output-filename", default=None, help="Filename (no extension) to save as. Defaults to the character name. Re-running with the same name overwrites the file.")
     parser.add_argument("--show", action="store_true", help="Open the generated image when done")

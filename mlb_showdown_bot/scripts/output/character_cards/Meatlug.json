@@ -1,0 +1,19 @@
+{
+  "base_name": "Cal Raleigh",
+  "base_year": "2025",
+  "character_name": "Meatlug",
+  "command": null,
+  "defense": {},
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "photos/meatlug.webp",
+  "ip": null,
+  "output_filename": null,
+  "outs": null,
+  "set": "2002",
+  "speed": null,
+  "speed_letter": null,
+  "stats": {},
+  "team_override": null
+}

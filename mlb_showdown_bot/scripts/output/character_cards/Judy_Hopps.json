@@ -1,0 +1,23 @@
+{
+  "base_name": "John Franco",
+  "base_year": "1988",
+  "character_name": "Judy Hopps",
+  "command": null,
+  "dark_mode": false,
+  "defense": {},
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "photos/judyhopps.png",
+  "ip": null,
+  "output_filename": null,
+  "outs": null,
+  "parallel": null,
+  "set": "2002",
+  "speed": null,
+  "speed_letter": null,
+  "stats": {
+    "SO": 70
+  },
+  "team_override": null
+}

@@ -1,0 +1,24 @@
+{
+  "base_name": "Roger Clemens",
+  "base_year": "1997",
+  "character_name": "Elsa",
+  "command": 4,
+  "dark_mode": false,
+  "defense": {},
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "photos/elsa.avif",
+  "ip": null,
+  "output_filename": null,
+  "outs": 17,
+  "parallel": null,
+  "set": "2002",
+  "set_number": null,
+  "speed": null,
+  "speed_letter": null,
+  "stats": {
+    "SO": 330
+  },
+  "team_override": null
+}

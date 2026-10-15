@@ -1,0 +1,25 @@
+{
+  "base_name": "Elly De La Cruz",
+  "base_year": "2026",
+  "character_name": "Rapunzel",
+  "command": 12,
+  "dark_mode": false,
+  "defense": {},
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "photos/rapunzel-v2.webp",
+  "ip": null,
+  "output_filename": null,
+  "outs": 7,
+  "parallel": null,
+  "set": "2002",
+  "speed": null,
+  "speed_letter": null,
+  "stats": {
+    "2B": 24,
+    "3B": 14,
+    "HR": 7
+  },
+  "team_override": null
+}
