@@ -3,6 +3,7 @@
   "base_year": "1982",
   "character_name": "Lightning McQueen",
   "command": 13,
+  "dark_mode": false,
   "defense": {},
   "hide_bot_logo": true,
   "hide_set_year_text": true,
@@ -11,7 +12,9 @@
   "ip": null,
   "output_filename": null,
   "outs": 7,
+  "parallel": null,
   "set": "2002",
+  "set_number": "4/98",
   "speed": null,
   "speed_letter": null,
   "stats": {
