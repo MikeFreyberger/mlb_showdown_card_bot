@@ -1,0 +1,22 @@
+{
+  "base_name": "Jackie Robinson",
+  "base_year": "1949",
+  "character_name": "Black Panther",
+  "command": null,
+  "dark_mode": false,
+  "defense": {},
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "/root/.claude/uploads/b78a4aeb-21b4-5494-af82-4cbaaef62dc0/86f36d9e-image.jpg",
+  "ip": null,
+  "output_filename": null,
+  "outs": null,
+  "parallel": null,
+  "set": "2002",
+  "set_number": "11/98",
+  "speed": null,
+  "speed_letter": null,
+  "stats": {},
+  "team_override": null
+}
