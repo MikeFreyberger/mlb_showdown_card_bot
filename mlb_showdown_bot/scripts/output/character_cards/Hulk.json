@@ -1,0 +1,25 @@
+{
+  "base_name": "Mark McGwire",
+  "base_year": "1998",
+  "character_name": "Hulk",
+  "command": null,
+  "dark_mode": false,
+  "defense": {},
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "/root/.claude/uploads/878539b4-0253-5942-b13b-f8711ea1598c/a4cfb383-image.webp",
+  "ip": null,
+  "output_filename": null,
+  "outs": null,
+  "parallel": null,
+  "set": "2002",
+  "set_number": "10/98",
+  "speed": null,
+  "speed_letter": null,
+  "stats": {
+    "2B": 30,
+    "HR": 95
+  },
+  "team_override": null
+}
