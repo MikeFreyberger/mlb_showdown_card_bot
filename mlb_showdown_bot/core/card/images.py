@@ -631,7 +631,9 @@ class ShowdownImage(BaseModel):
     is_bordered: bool = False
     
     hide_team_logo: bool = False
-    
+    hide_bot_logo: bool = False
+    hide_set_year_text: bool = False
+
     error: Optional[str] = None
     nickname_index: Optional[int] = None
     glow_multiplier: float = 1.0
