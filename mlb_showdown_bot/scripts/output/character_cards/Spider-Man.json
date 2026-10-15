@@ -1,0 +1,23 @@
+{
+  "base_name": "Pedro Martinez",
+  "base_year": "1997",
+  "character_name": "Spider-Man",
+  "command": 6,
+  "dark_mode": false,
+  "defense": {},
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "photos/spiderman.jpg",
+  "ip": null,
+  "output_filename": null,
+  "outs": 17,
+  "parallel": null,
+  "set": "2002",
+  "speed": null,
+  "speed_letter": null,
+  "stats": {
+    "BB": 50
+  },
+  "team_override": null
+}
