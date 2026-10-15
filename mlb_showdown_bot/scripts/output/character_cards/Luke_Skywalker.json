@@ -1,0 +1,22 @@
+{
+  "base_name": "Joe Morgan",
+  "base_year": "1975",
+  "character_name": "Luke Skywalker",
+  "command": null,
+  "dark_mode": false,
+  "defense": {},
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "photos/lukeskywalker.jpg",
+  "ip": null,
+  "output_filename": null,
+  "outs": null,
+  "parallel": null,
+  "set": "2002",
+  "set_number": "5/98",
+  "speed": null,
+  "speed_letter": null,
+  "stats": {},
+  "team_override": null
+}
