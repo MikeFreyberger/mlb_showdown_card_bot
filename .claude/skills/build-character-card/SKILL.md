@@ -58,6 +58,11 @@ Use the repo's `.venv` (see Environment note below) rather than a bare `python`:
 (Set defaults to `2002`, and the team logo / bot logo / year badge are already hidden by default
 - no flags needed for that.)
 
+If this character is part of a themed multi-card set (ex: "we're making 98 Disney cards"), pass
+`--set-number "<n>/<total>"` (ex: `--set-number "1/98"`) so the checklist number prints where the
+real year badge would've gone, instead of leaving that spot blank. Ask the user for the character's
+number in the set if they haven't given one and it's clearly a multi-card project.
+
 The script prints the full breakdown to stdout (points, chart, projected-vs-real stats table) -
 **read it, don't just glance at the image.** Then view the saved image with the Read tool (path is
 printed at the end, and also always `mlb_showdown_bot/scripts/output/character_cards/<character
