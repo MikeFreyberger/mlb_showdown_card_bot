@@ -4,11 +4,14 @@
   "character_name": "Black Panther",
   "command": null,
   "dark_mode": false,
-  "defense": {},
+  "defense": {
+    "SS": 5,
+    "_2B": 5
+  },
   "hide_bot_logo": true,
   "hide_set_year_text": true,
   "hide_team_logo": true,
-  "image_path": "/root/.claude/uploads/b78a4aeb-21b4-5494-af82-4cbaaef62dc0/86f36d9e-image.jpg",
+  "image_path": "/root/.claude/uploads/b78a4aeb-21b4-5494-af82-4cbaaef62dc0/1ab998b2-image.png",
   "ip": null,
   "output_filename": null,
   "outs": null,
