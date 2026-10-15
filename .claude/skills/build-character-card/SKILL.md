@@ -58,10 +58,24 @@ Use the repo's `.venv` (see Environment note below) rather than a bare `python`:
 (Set defaults to `2002`, and the team logo / bot logo / year badge are already hidden by default
 - no flags needed for that.)
 
-If this character is part of a themed multi-card set (ex: "we're making 98 Disney cards"), pass
-`--set-number "<n>/<total>"` (ex: `--set-number "1/98"`) so the checklist number prints where the
-real year badge would've gone, instead of leaving that spot blank. Ask the user for the character's
-number in the set if they haven't given one and it's clearly a multi-card project.
+**Every new character is part of the 98-card character set**, so always pass
+`--set-number "<n>/98"`. The number prints where the real year badge would have gone. Don't ask the
+user for it. Use the next unused number: one more than the highest `N/98` already assigned. Check
+the `character-cards` branch and any unmerged `characters/*` branches, so two open PRs don't claim
+the same number:
+
+```bash
+git fetch -q origin
+for ref in $(git for-each-ref --format='%(refname)' refs/remotes/origin/character-cards 'refs/remotes/origin/characters/*'); do
+  for f in $(git ls-tree --name-only "$ref" mlb_showdown_bot/scripts/output/character_cards/ | grep '\.json$'); do
+    git show "$ref:$f" | grep -o '"set_number": "[0-9]*/98"'
+  done
+done | grep -o '[0-9]*/' | tr -d / | sort -n | tail -1   # highest used; next = this + 1
+```
+
+Override this only when the user names a specific number. Always write it in the full `n/98` form
+(ex: `10/98`, not `10`). When editing an existing character, keep its saved number. Don't pass
+`--set-number` again unless the user asks to change it.
 
 The script prints the full breakdown to stdout (points, chart, projected-vs-real stats table) -
 **read it, don't just glance at the image.** Then view the saved image with the Read tool (path is
@@ -153,6 +167,24 @@ The script already overwrites the same file each run (named after the character 
 happy, display the final image again with the Read tool (even if it looks the same as the last
 iteration you showed) alongside the final stat line/points total, and confirm the file path. If
 they want a different save location, pass `--output-folder`.
+
+### Commit and open a PR into `character-cards`
+
+Every character goes up as a PR into the **`character-cards`** branch, not `master`/`dev`.
+Do this once the user is happy (or when they ask to commit):
+
+1. Branch from the latest `character-cards`:
+   `git fetch origin character-cards && git checkout -b characters/<character-slug> origin/character-cards`
+   (if you already committed on another branch, cherry-pick or merge onto this one).
+2. Commit only that character's `<Character>.jpg` and `<Character>.json` (the folder is
+   un-ignored in `.gitignore`), using a message like
+   `Add <Character> character card (<Base Player>, <Year>)`.
+3. `git push -u origin characters/<character-slug>`.
+4. Open the PR with the GitHub MCP `create_pull_request` tool, using `base: character-cards`.
+   Title it like the commit. In the body, list the base player/year, set number, points, and the
+   stat overrides used.
+5. Later tweaks to that character go on the same branch, and the open PR updates with them. Don't
+   open a second PR.
 
 ## Environment note
 
