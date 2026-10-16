@@ -1,0 +1,24 @@
+{
+  "base_name": "Willie Mays",
+  "base_year": "1954",
+  "character_name": "Elastigirl",
+  "command": 12,
+  "dark_mode": false,
+  "defense": {
+    "CF": 6
+  },
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "photos/elastigirl.png",
+  "ip": null,
+  "output_filename": null,
+  "outs": 5,
+  "parallel": null,
+  "set": "2002",
+  "set_number": "14/98",
+  "speed": null,
+  "speed_letter": null,
+  "stats": {},
+  "team_override": null
+}
