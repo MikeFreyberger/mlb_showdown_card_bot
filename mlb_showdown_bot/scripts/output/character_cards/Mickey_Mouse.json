@@ -1,0 +1,22 @@
+{
+  "base_name": "Bob Gibson",
+  "base_year": "1968",
+  "character_name": "Mickey Mouse",
+  "command": null,
+  "dark_mode": false,
+  "defense": {},
+  "hide_bot_logo": true,
+  "hide_set_year_text": true,
+  "hide_team_logo": true,
+  "image_path": "photos/mickey-mouse-baseball6.png",
+  "ip": null,
+  "output_filename": null,
+  "outs": null,
+  "parallel": null,
+  "set": "2002",
+  "set_number": "7/98",
+  "speed": null,
+  "speed_letter": null,
+  "stats": {},
+  "team_override": null
+}

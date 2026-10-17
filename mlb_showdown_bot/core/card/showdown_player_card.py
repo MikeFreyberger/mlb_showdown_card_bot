@@ -3870,9 +3870,10 @@ class ShowdownPlayerCard(BaseModel):
             template_image.paste(positions_points_image, top_left_paste_location, positions_points_image)
         
         # ADD SHOWDOWN BOT LOGO AND ERA
-        logo_img = self._bot_logo_img()
-        logo_paste_location = self.set.template_component_paste_coordinates(TemplateImageComponent.BOT_LOGO)
-        template_image.paste(logo_img, self._coordinates_adjusted_for_bordering(coordinates=logo_paste_location, is_forced=True), logo_img)
+        if not self.image.hide_bot_logo:
+            logo_img = self._bot_logo_img()
+            logo_paste_location = self.set.template_component_paste_coordinates(TemplateImageComponent.BOT_LOGO)
+            template_image.paste(logo_img, self._coordinates_adjusted_for_bordering(coordinates=logo_paste_location, is_forced=True), logo_img)
 
         # CROP (IF NECESSARY)
         template_image = self._crop_template_image(template_image)
@@ -4547,6 +4548,8 @@ class ShowdownPlayerCard(BaseModel):
 
         # IF USER DID NOT ASSIGN A SET NUMBER VALUE, ASSIGN THE SET'S DEFAULT
         set_number_visual = self.image.set_number or self.set.default_set_number(self.year)
+        if self.image.hide_set_year_text and not self.image.set_number:
+            set_number_visual = ''
 
         if self.set.has_unified_set_and_year_strings:
             # SET AND NUMBER IN SAME STRING
@@ -4586,7 +4589,8 @@ class ShowdownPlayerCard(BaseModel):
                 alignment = alignment
             )
             year_text = year_text.resize((int(set_year_size[0] / 3.75), int(set_year_size[1] / 3.75)), Image.Resampling.LANCZOS)
-            set_image.paste(set_text_color, set_image_location, year_text)
+            if not self.image.hide_set_year_text:
+                set_image.paste(set_text_color, set_image_location, year_text)
 
             hide_set_number = self.image.set_number is None and self.set.is_showdown_bot
             if not hide_set_number:
