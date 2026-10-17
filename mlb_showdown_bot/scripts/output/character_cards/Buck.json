@@ -4,11 +4,13 @@
   "character_name": "Buck",
   "command": null,
   "dark_mode": false,
-  "defense": {},
+  "defense": {
+    "LFRF": 0
+  },
   "hide_bot_logo": true,
   "hide_set_year_text": true,
   "hide_team_logo": true,
-  "image_path": "/root/.claude/uploads/b78a4aeb-21b4-5494-af82-4cbaaef62dc0/3c311e10-image.jpg",
+  "image_path": "/root/.claude/uploads/b78a4aeb-21b4-5494-af82-4cbaaef62dc0/631cfa4a-image.png",
   "ip": null,
   "output_filename": null,
   "outs": null,
