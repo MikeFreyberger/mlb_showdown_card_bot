@@ -2,7 +2,7 @@
   "base_name": "Eric Gagne",
   "base_year": "2003",
   "character_name": "Toothless",
-  "command": null,
+  "command": 6,
   "dark_mode": false,
   "defense": {},
   "hide_bot_logo": true,
@@ -11,12 +11,14 @@
   "image_path": "/root/.claude/uploads/b78a4aeb-21b4-5494-af82-4cbaaef62dc0/c56f9133-image.jpg",
   "ip": null,
   "output_filename": null,
-  "outs": null,
+  "outs": 18,
   "parallel": null,
   "set": "2002",
   "set_number": "15/98",
   "speed": null,
   "speed_letter": null,
-  "stats": {},
+  "stats": {
+    "BB": 17
+  },
   "team_override": null
 }
